@@ -1,3 +1,13 @@
 {
-    "python.pythonPath": "/home/dansish/.local/share/virtualenvs/Awesome_Quotes-tVZRpCMC/bin/python"
+    "python.pythonPath": "/home/dansish/.local/share/virtualenvs/Awesome_Quotes-tVZRpCMC/bin/python",
+    "files.associations": {
+        "**/templates/*.html": "django-html",
+        "**/templates/*": "django-txt",
+        "**/requirements{/**,*}.{txt,in}": "pip-requirements"
+    },
+    "emmet.includeLanguages": {
+        "django-html": "html"
+    },
+    "python.linting.enabled": true,
+    "python.linting.pylintEnabled": true,
 }

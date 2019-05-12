@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h1>Quotes</h1>
+<hr>
+{% if quotes %}
+
+    {% for quote in quotes %}
+    <div class="alert alert-{% cycle 'primary' 'secondary' 'success' 'info' 'warning' 'danger' 'dark' %} d-flex justify-content-between align-items-center">
+        “{{quote.quote}}”
+    <br>
+    ― {{quote.author.name}}
+        <span style="margin-left:400px">
+        {% for category in quote.category.all %}
+            <span class="badge badge-{% cycle 'primary' 'secondary' 'success' 'info' 'warning' 'danger' 'dark' %}"> {{category}} </span>
+        {% endfor %}
+        </span>
+    </div>
+    {% endfor %}
+
+{% else %}
+    No Quotes available!!
+{% endif %}
+
+{% endblock content %}
